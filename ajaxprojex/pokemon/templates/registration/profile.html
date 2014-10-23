@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+{% block head %}User Profile{% endblock head %}
+{% block content %}
+    <h1>Profile</h1>
+    <p>Hi {{user.username }}</p>
+    <p>Your last login was {{ user.last_login }}</p>
+    <p>Memeber since {{ user.date_joined }}</p>
+    <p>Your email address is {{ user.email }}</p>
+
+    <p>Your current teams:</p>
+    {% for team in teams %}
+        <li><a href="{% url "view_team" team.id %}">{{ team.name }}</a></li>
+    {% endfor %}
+{% endblock content %}

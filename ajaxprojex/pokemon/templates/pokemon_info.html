@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+{% block head %}Poke Info{% endblock head %}
+{% block content %}
+    <div class='pokemonInfo'>
+    <img src='{{ image }}'/>
+    <p>
+        Name: {{ name }}
+    </p>
+    <p>
+        ID: {{ pokedex_id }}
+    </p>
+</div>
+{% endblock content %}
+

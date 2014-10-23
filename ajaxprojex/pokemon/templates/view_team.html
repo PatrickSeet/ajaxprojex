@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+{% block head %}Poke Info{% endblock head %}
+{% block content %}
+    <div class='pokemonTeamInfo'>
+
+    {% for pokemon in pokemons %}
+ <li>{{ pokemon.name }}</li>
+ <li>{{ pokemon.pokedex_id }}</li>
+ <li>{{ pokemon.name }}</li>
+ <li>{{ pokemon.name }}</li>
+
+
+    <img src='{{ image }}'/>
+
+    {% endfor %}
+</div>
+{% endblock content %}
+
